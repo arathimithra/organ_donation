@@ -1,0 +1,25 @@
+*{
+padding:0px;
+margin:0px
+outline:none;
+box-sizing:border-box;
+}
+body{
+height:100vh;
+}
+.card-body{
+width:100%;
+max-width:500px;
+text-align:center;
+box-shadow: 0 2px 3px red;
+margin-top:60px;
+margin-left:auto;
+margin-right:auto;
+padding:30px;
+
+}
+form input{
+padding:5px;
+margin-bottom:30px;
+font-family:italic;
+}

@@ -1,0 +1,44 @@
+*{
+ margin: 0;
+ padding: 0;
+ outline: none;
+ box-sizing: border-box;
+}
+
+
+body{
+height:100vh;
+background-image:url('login.jpeg');
+background-size:cover;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+.container{
+width:100%;
+max-width:400px;
+color:black;
+border:3px solid red;
+text-align:center;
+padding:30px;
+line-height:30px;
+}
+h1{
+margin-bottom:25px;
+}
+
+.container input{
+background-color:grey;
+border:none;
+padding:5px;
+font-size:16px;
+margin-bottom:10px;
+}
+.card-body .button{
+background-color:red;
+color:white;
+padding: 10px;
+border:none;
+margin:20px;
+}

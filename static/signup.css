@@ -1,0 +1,110 @@
+
+
+
+ *{
+margin:0;
+padding:0;
+font-family:'roboto',sans-serif;
+}
+     body {
+        text-align: center;
+        padding: 40px 0;
+        background: white;
+        }
+          #top a {
+
+           font-size: 100%;
+           font-weight: 700;
+           text-decoration: none;
+           padding-left: 1%;
+           padding-right: 2%;
+        }
+        #top {
+
+            margin-right: 5%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            text-align: right;
+
+        }
+
+        #top1 {
+
+            margin-right: 5%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            text-align: right;
+
+        }
+
+
+         .dropdown-item {
+                  color: blue;
+        }
+        #formm {
+                background: rgb(222, 226, 230);
+                padding-top: 5%;
+                padding-bottom: 2%;
+                text-align: center;
+                margin-left: 1px;
+                margin-right: 40%;
+                margin-top: 12%
+
+
+
+        }
+
+
+
+        .container {
+              display: flex;
+              align-items: center;
+        }
+
+       .container img {
+        margin-left:80px;
+       }
+
+       .container form {
+                flex: 1;
+                margin-left: 80px;
+       }
+
+ .card {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px red;
+        display: inline-block;
+        margin: 0 auto;
+         align-items: center;
+              margin-left: 90px;
+               margin-top: 80px;
+      }
+
+  h1 {
+          color:black;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+          margin-top: 8px;
+
+
+box-sizing:border-box;
+}
+
+      .button {
+        width:200px;
+        height:20px;
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }

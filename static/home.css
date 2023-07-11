@@ -1,0 +1,96 @@
+*{
+margin:0;
+padding:0;
+font-family:'roboto',sans-serif;
+}
+.container{
+ width=100%;
+height:100vh;
+
+background-position:center;
+background size:100px;
+padding-left:.5%;
+
+box-sizing:border-box;
+}
+.navbar{
+height:8%;
+display:flex;
+align-items:center;
+background-color:red;
+
+}
+.logo{
+width:50px;
+
+cursor:pointer;
+align:left;
+}
+nav{
+flex:2;
+text-align:right;
+
+}
+nav ul li
+{
+list-style:none;
+display:inline-block;
+margin-left:60px
+}
+nav ul li a
+{
+text-decoration:none;
+color:white;
+font-size:15px
+}
+
+.card{
+width:250px;
+height:230px;
+display:inline-block;
+border:5px;
+padding:15px 25px;
+box-sizing:border-box;
+cursor:pointer;
+margin:10px 15px;
+background-image:url('static/pictures/logbg.jpg');
+background-position:centre;
+backgound-size:covered;
+box-shadow:10px 10px 10px 10px white;
+}
+.card img{
+width:130%;
+height:150%;
+align:left;
+}
+
+.col{
+height:20%;
+flex-basis:50%;
+align-items:center;
+padding-top:380px;
+padding-left:60px;
+
+}
+.card:hover
+{
+transform:translateY(-50px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

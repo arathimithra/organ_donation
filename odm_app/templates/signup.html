@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <link rel="stylesheet" href="{% static 'signup.css'%}">
+</head>
+<body>
+
+ <header id="nav-wrapper">
+    <nav id="nav">
+      <div class="nav left">
+
+
+        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+      </div>
+      <div class="nav right">
+        <a href="{% url 'home' %}" class="nav-link active"><span class="nav-link-span"><span class="u-nav">HOME</span></span></a>
+        <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
+
+<!--        <a href="#contact" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>-->
+      </div>
+    </nav>
+  </header>
+<div  style=" height:600px;  background-image: url('{% static 'pictures/all2.jpg' %}');background-repeat: no-repeat;background-size: cover;">
+
+<div class="card">
+<h1>Register</h1>
+<form method="post" action="" id="reg">
+
+    <div class="form-group">
+
+        <label for="id_username">Username:</label>
+        <br>
+        <input type="text" name="username" >
+        {% if form.errors.username %}
+            <p class="error"  style="color: red;">{{ form.errors.username }}</p>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        <label for="id_email">Email:</label>
+        <br>
+        <input type="email" name="email" >
+        {% if form.errors.email %}
+            <p class="error">{{ form.errors.email }}</p>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        <label for="id_password1">Password:</label>
+        <br>
+        <input type="password" name="password1"
+        {% if form.errors.password1 %}
+            <p class="error">{{ form.errors.password1 }}</p>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        <label for="id_password2">Confirm Password:</label>
+        <br>
+        <input type="password" name="password2" >
+        {% if form.errors.password2 %}
+            <p class="error">{{ form.errors.password2 }}</p>
+        {% endif %}
+    </div>
+    <br>
+    <div class="form-group">
+        {% csrf_token %}
+        <button type="submit" class="button">Signup</button>
+    </div>
+
+</form>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
