@@ -4,49 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-        <link rel="stylesheet" href="{% static 'all_logins.css'%}">
+    <link rel="stylesheet" href="{% static 'all_logins.css'%}">
 </head>
 
 
 <body style=" height:800px; background-image: url('{% static 'pictures/all2.jpg' %}');background-repeat:no-repeat;background-size: cover; ">
 <header id="nav-wrapper">
     <nav id="nav">
-      <div class="nav left">
+        <div class="nav left">
 
 
-        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
-      </div>
-      <div class="nav right">
-        <a href="{% url 'home' %}" class="nav-link active"><span class="nav-link-span"><span class="u-nav">HOME</span></span></a>
-        <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
-        <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span class="u-nav">Logout</span></span></a>
-<!--        <a href="#contact" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>-->
-      </div>
+            <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+        </div>
+        <div class="nav right">
+            <a href="{% url 'home' %}" class="nav-link active"><span class="nav-link-span"><span
+                    class="u-nav">HOME</span></span></a>
+            <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span
+                    class="u-nav">About</span></span></a>
+            <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span
+                    class="u-nav">Logout</span></span></a>
+            <!--        <a href="#contact" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>-->
+        </div>
     </nav>
-  </header>
+</header>
 <br><br><br><br><br><br><br><br>
 <div class="container">
 
     <div class="card">
-       <a href="{% url 'search_profile' %}">
-         <img style="height:300px;width:250px" src="/static/pictures/donors2.jpg/"  alt="Donor"></a>
-             <div class="intro">
-                        <br>
-                <h3>My DONOR PROFILE</h3>
+        <a href="{% url 'search_profile' %}">
+            <img style="height:300px;width:250px" src="/static/pictures/donors2.jpg/" alt="Donor"></a>
+        <div class="intro">
+            <br>
+            <h3>My DONOR PROFILE</h3>
 
-                 <p> View/Edit your donor profile..</p>
-             </div>
+            <p> View/Edit your donor profile..</p>
+        </div>
     </div>
-     <div class="card">
+    <div class="card">
 
-       <a href="{% url 'search_organ' %}">
-         <img  style="height:300px;width:250px" src="/static/pictures/search5.png/"  alt="Donor"></a>
-             <div class="intro">
-                 <br>
-                 <h3>SEARCH FOR ORGAN</h3>
+        <a href="{% url 'search_organ' %}">
+            <img style="height:300px;width:250px" src="/static/pictures/search5.png/" alt="Donor"></a>
+        <div class="intro">
+            <br>
+            <h3>SEARCH FOR ORGAN</h3>
 
-                 <p>For organ search click here..</p>
-             </div>
+            <p>For organ search click here..</p>
+        </div>
     </div>
 </div>
 

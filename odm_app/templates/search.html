@@ -2,77 +2,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta id="meta" name="viewport"
+          content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <link rel="stylesheet" href="{% static 'search.css'%}">
     <title>Title</title>
 
 </head>
 <body>
-<div  style=" height:800px;  background-image: url('{% static 'pictures/all2.jpg' %}');background-repeat: no-repeat;background-size: cover;">
+<div style=" height:800px;  background-image: url('{% static 'pictures/all2.jpg' %}');background-repeat: no-repeat;background-size: cover;">
 
- <header id="nav-wrapper">
-    <nav id="nav">
-      <div class="nav left">
+    <header id="nav-wrapper">
+        <nav id="nav">
+            <div class="nav left">
 
 
-        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
-      </div>
-      <div class="nav right">
-        <a href="{% url 'home' %}" class="nav-link active"><span class="nav-link-span"><span class="u-nav">HOME</span></span></a>
-        <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
-        <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span class="u-nav">Logout</span></span></a>
-<!--        <a href="#contact" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>-->
-      </div>
-    </nav>
-  </header>
+                <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
+            </div>
+            <div class="nav right">
+                <a href="{% url 'home' %}" class="nav-link active"><span class="nav-link-span"><span
+                        class="u-nav">HOME</span></span></a>
+                <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
+                <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-span"><span
+                        class="u-nav">Logout</span></span></a>
+                <!--        <a href="#contact" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>-->
+            </div>
+        </nav>
+    </header>
 
-<br><br>
-<h2>Donor List</h2>
+    <br><br>
+    <h2>Donor List</h2>
     <br>
     <br>
-<table class="center">
-     <tr>
+    <table class="center">
+        <tr>
 
 
-
-        <td style="width:15%; height:50px;">Name</td>
-        <td style="width:15%; height:50px;">Age</td>
-        <td style="width:15%; height:50px;">Gender</td>
-         <td style="width:15%; height:50px;">Blood Group</td>
-         <td style="width:15%; height:50px;">Organ</td>
-        <td style="width:15%; height:50px;">Phone Number</td>
-        <td style="width:15%; height:50px;">Place</td>
-          <td style="width:15%; height:50px;">Organ Availability</td>
-
-
-    </tr>
+            <td style="width:15%; height:50px;">Name</td>
+            <td style="width:15%; height:50px;">Age</td>
+            <td style="width:15%; height:50px;">Gender</td>
+            <td style="width:15%; height:50px;">Blood Group</td>
+            <td style="width:15%; height:50px;">Organ</td>
+            <td style="width:15%; height:50px;">Phone Number</td>
+            <td style="width:15%; height:50px;">Place</td>
+            <td style="width:15%; height:50px;">Organ Availability</td>
 
 
-{%for doners in object_list %}
-<tr>
-    <td>{{doners.name}}</td>
- <td>{{doners.age}}</td>
- <td>{{doners.gender}}</td>
- <td>{{doners.blood_group}}</td>
- <td>{{doners.organ}}</td>
- <td>{{doners.phone_no}}</td>
- <td>{{doners.place}}</td>
-<td> {% if doners.status is True%}
-    Available
-    {%else%}
-    Not Available</td>
-    {% endif%}
-
- </tr>
-{% empty %}
- <img style="align:center;width:500px;" src="/static/pictures/fail.jpg/"  alt="..."></a>
-    <a class="btn btn-primary" href="{% url 'search_organ' %}" role="button">Back </a>
+        </tr>
 
 
-{% endfor %}
-</table>
+        {%for doners in object_list %}
+        <tr>
+            <td>{{doners.name}}</td>
+            <td>{{doners.age}}</td>
+            <td>{{doners.gender}}</td>
+            <td>{{doners.blood_group}}</td>
+            <td>{{doners.organ}}</td>
+            <td>{{doners.phone_no}}</td>
+            <td>{{doners.place}}</td>
+            <td> {% if doners.status is True%}
+                Available
+                {%else%}
+                Not Available
+            </td>
+            {% endif%}
+
+        </tr>
+        {% empty %}
+        <img style="align:center;width:500px;" src="/static/pictures/fail.jpg/" alt="..."></a>
+        <a class="btn btn-primary" href="{% url 'search_organ' %}" role="button">Back </a>
+
+
+        {% endfor %}
+    </table>
 </div>
 </body>
 </html>

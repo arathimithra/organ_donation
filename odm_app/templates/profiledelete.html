@@ -1,27 +1,26 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-     <link rel="stylesheet" href="{% static 'confirmation.css'%}">
+    <link rel="stylesheet" href="{% static 'confirmation.css'%}">
 </head>
 <body>
-<div  style=" height:600px;  background-image: url('{% static 'pictures/all2.jpg' %}');background-repeat: no-repeat;background-size: cover;">
-<div class="card">
-      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+<div style=" height:600px;  background-image: url('{% static 'pictures/all2.jpg' %}');background-repeat: no-repeat;background-size: cover;">
+    <div class="card">
+        <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
 
-  <form method="post" action="">
-    {% csrf_token %}
-    <p>Are you sure you want to delete your donor profile"?</p>
-<input class="button" type="submit" value="Delete">
-<!--      <a href="{% url 'deletemessage'%}" class="button"style="font-size:17px">Delete</a>-->
-<a href="{% url 'all_logins'%}" class="button"style="font-size:17px">Cancel</a>
+            <form method="post" action="">
+                {% csrf_token %}
+                <p>Are you sure you want to delete your donor profile"?</p>
+                <input class="button" type="submit" value="Delete">
+                <!--      <a href="{% url 'deletemessage'%}" class="button"style="font-size:17px">Delete</a>-->
+                <a href="{% url 'all_logins'%}" class="button" style="font-size:17px">Cancel</a>
 
-  </form>
-</div>
-</div>
+            </form>
+        </div>
+    </div>
 </div>
 </body>
 </html>
